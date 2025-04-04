@@ -1,16 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://dayf88orsw1pj"]
+[gd_scene load_steps=5 format=3 uid="uid://dayf88orsw1pj"]
 
-[ext_resource type="Texture2D" uid="uid://da02apwv14t8c" path="res://Sprites/tile_0049.png" id="1_bvfl7"]
+[ext_resource type="Texture2D" uid="uid://btsuy3s2dcni1" path="res://Sprites/tile_0001.png" id="1_b46sv"]
+[ext_resource type="PackedScene" uid="uid://2l8htcuyl6f6" path="res://Escenes/terra_de_prova.tscn" id="2_rjy2a"]
+[ext_resource type="Texture2D" uid="uid://jf2liyrtnprs" path="res://Sprites/tile_0003.png" id="3_u82ur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvfl7"]
-size = Vector2(1151, 45)
+size = Vector2(1152, 64)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(144, 5.5)
-texture = ExtResource("1_bvfl7")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_bvfl7")
+
+[node name="Part_esquerra" type="Sprite2D" parent="."]
+position = Vector2(-544, 0)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("1_b46sv")
+
+[node name="Part_mig" parent="." instance=ExtResource("2_rjy2a")]
+position = Vector2(-480, 0)
+scale = Vector2(3.55556, 3.55556)
+
+[node name="Part_dreta" type="Sprite2D" parent="."]
+position = Vector2(544, -7.62939e-06)
+scale = Vector2(3.55555, 3.55556)
+texture = ExtResource("3_u82ur")
