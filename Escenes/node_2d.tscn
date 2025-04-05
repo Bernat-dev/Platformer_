@@ -1,12 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://8i1bdtutlaij"]
+[gd_scene load_steps=6 format=3 uid="uid://8i1bdtutlaij"]
 
 [ext_resource type="PackedScene" uid="uid://daofu4um8tcmv" path="res://Escenes/player.tscn" id="1_qabl6"]
 [ext_resource type="PackedScene" uid="uid://dayf88orsw1pj" path="res://Escenes/terra.tscn" id="2_gyiwt"]
+[ext_resource type="PackedScene" uid="uid://b7n7jnacciiev" path="res://Escenes/death_zone.tscn" id="3_belbe"]
+[ext_resource type="PackedScene" uid="uid://b1uqkh3dewj3f" path="res://Escenes/plataforma_2.tscn" id="3_hghi8"]
+[ext_resource type="PackedScene" uid="uid://c4h85s26wurrl" path="res://Escenes/moneda.tscn" id="5_6m6vu"]
 
 [node name="Joc" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_qabl6")]
 scale = Vector2(3, 3)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("2_gyiwt")]
-position = Vector2(573, 615)
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+scale = Vector2(0.333333, 0.333333)
+
+[node name="plataforma_1" parent="." instance=ExtResource("2_gyiwt")]
+position = Vector2(0, 616)
+
+[node name="plataforma_2" parent="." instance=ExtResource("3_hghi8")]
+position = Vector2(499, 476)
+
+[node name="plataforma_3" parent="." instance=ExtResource("2_gyiwt")]
+position = Vector2(1096, 684)
+
+[node name="death_zone" parent="." instance=ExtResource("3_belbe")]
+position = Vector2(442, 1093)
+
+[node name="moneda_1" parent="." instance=ExtResource("5_6m6vu")]
+position = Vector2(1152, 632)
+
+[node name="moneda_2" parent="." instance=ExtResource("5_6m6vu")]
+position = Vector2(1088, 632)
+
+[node name="moneda_3" parent="." instance=ExtResource("5_6m6vu")]
+position = Vector2(1024, 632)
+
+[connection signal="body_entered" from="death_zone" to="CharacterBody2D" method="_on_area_2d_body_entered"]

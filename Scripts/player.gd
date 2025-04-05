@@ -27,6 +27,23 @@ func _process(delta: float) -> void:
 		salts_disponibles = 2
 		
 	if velocity.x > 0:
-		$player_sprite.flip_h = true
+		$AnimatedSprite2D.flip_h = true
 	else:
-		$player_sprite.flip_h = false
+		$AnimatedSprite2D.flip_h = false
+		
+	#animacions
+	if dx == 0:
+		$AnimatedSprite2D.play("quiet")
+	else:
+		if is_on_floor():
+			$AnimatedSprite2D.play("correr")
+		else:
+			$AnimatedSprite2D.play("salt")
+	
+	
+
+
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	queue_free()
