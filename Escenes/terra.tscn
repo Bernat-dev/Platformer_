@@ -8,12 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://qxknmdiwjmhh" path="res://Sprites/tile_0104.png" id="6_2nq01"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvfl7"]
-size = Vector2(256, 384)
+size = Vector2(256, 1024)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 160)
+position = Vector2(0, 480)
 shape = SubResource("RectangleShape2D_bvfl7")
 
 [node name="Gespa" type="Sprite2D" parent="."]
@@ -23,17 +23,14 @@ texture = ExtResource("1_tvv4o")
 
 [node name="Tile0024" type="Sprite2D" parent="Gespa"]
 position = Vector2(18, 8.71718e-07)
-scale = Vector2(1, 1)
 texture = ExtResource("2_x06u7")
 
 [node name="Tile0022" type="Sprite2D" parent="Gespa"]
 position = Vector2(-18, 2.01166e-07)
-scale = Vector2(1, 1)
 texture = ExtResource("1_tvv4o")
 
 [node name="Tile0021" type="Sprite2D" parent="Gespa"]
 position = Vector2(-36, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("3_jhv2d")
 
 [node name="Costat_terra_esquerra" type="Sprite2D" parent="."]
@@ -43,72 +40,58 @@ texture = ExtResource("4_ve27x")
 
 [node name="Tile0122" type="Sprite2D" parent="Costat_terra_esquerra"]
 position = Vector2(1.90735e-06, 18)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Tile0123" type="Sprite2D" parent="Costat_terra_esquerra"]
 position = Vector2(1.90735e-06, 36)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Tile0124" type="Sprite2D" parent="Costat_terra_esquerra"]
 position = Vector2(0, 54)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Tile0125" type="Sprite2D" parent="Costat_terra_esquerra"]
 position = Vector2(1.90735e-06, 72)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Costat_terra_esquerra2" type="Sprite2D" parent="Costat_terra_esquerra"]
 position = Vector2(1.90735e-06, 90)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Tile0122" type="Sprite2D" parent="Costat_terra_esquerra/Costat_terra_esquerra2"]
 position = Vector2(1.90735e-06, 18)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Tile0123" type="Sprite2D" parent="Costat_terra_esquerra/Costat_terra_esquerra2"]
 position = Vector2(1.90735e-06, 36)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Tile0124" type="Sprite2D" parent="Costat_terra_esquerra/Costat_terra_esquerra2"]
 position = Vector2(0, 54)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Tile0125" type="Sprite2D" parent="Costat_terra_esquerra/Costat_terra_esquerra2"]
 position = Vector2(1.90735e-06, 72)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Costat_terra_esquerra3" type="Sprite2D" parent="Costat_terra_esquerra"]
 position = Vector2(0, 180)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Tile0122" type="Sprite2D" parent="Costat_terra_esquerra/Costat_terra_esquerra3"]
 position = Vector2(1.90735e-06, 18)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Tile0123" type="Sprite2D" parent="Costat_terra_esquerra/Costat_terra_esquerra3"]
 position = Vector2(1.90735e-06, 36)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Tile0124" type="Sprite2D" parent="Costat_terra_esquerra/Costat_terra_esquerra3"]
 position = Vector2(0, 54)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Tile0125" type="Sprite2D" parent="Costat_terra_esquerra/Costat_terra_esquerra3"]
 position = Vector2(1.90735e-06, 72)
-scale = Vector2(1, 1)
 texture = ExtResource("4_ve27x")
 
 [node name="Costat_terra_dreta" type="Sprite2D" parent="."]
@@ -118,72 +101,58 @@ texture = ExtResource("5_c5q7s")
 
 [node name="Tile0127" type="Sprite2D" parent="Costat_terra_dreta"]
 position = Vector2(1.90735e-06, 18)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Tile0128" type="Sprite2D" parent="Costat_terra_dreta"]
 position = Vector2(1.90735e-06, 36)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Tile0129" type="Sprite2D" parent="Costat_terra_dreta"]
 position = Vector2(1.90735e-06, 54)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Tile0130" type="Sprite2D" parent="Costat_terra_dreta"]
 position = Vector2(1.90735e-06, 72)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Costat_terra_dreta2" type="Sprite2D" parent="Costat_terra_dreta"]
 position = Vector2(1.90735e-06, 90)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Tile0127" type="Sprite2D" parent="Costat_terra_dreta/Costat_terra_dreta2"]
 position = Vector2(1.90735e-06, 18)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Tile0128" type="Sprite2D" parent="Costat_terra_dreta/Costat_terra_dreta2"]
 position = Vector2(1.90735e-06, 36)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Tile0129" type="Sprite2D" parent="Costat_terra_dreta/Costat_terra_dreta2"]
 position = Vector2(1.90735e-06, 54)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Tile0130" type="Sprite2D" parent="Costat_terra_dreta/Costat_terra_dreta2"]
 position = Vector2(1.90735e-06, 72)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Costat_terra_dreta3" type="Sprite2D" parent="Costat_terra_dreta"]
 position = Vector2(1.90735e-06, 180)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Tile0127" type="Sprite2D" parent="Costat_terra_dreta/Costat_terra_dreta3"]
 position = Vector2(1.90735e-06, 18)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Tile0128" type="Sprite2D" parent="Costat_terra_dreta/Costat_terra_dreta3"]
 position = Vector2(1.90735e-06, 36)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Tile0129" type="Sprite2D" parent="Costat_terra_dreta/Costat_terra_dreta3"]
 position = Vector2(1.90735e-06, 54)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Tile0130" type="Sprite2D" parent="Costat_terra_dreta/Costat_terra_dreta3"]
 position = Vector2(1.90735e-06, 72)
-scale = Vector2(1, 1)
 texture = ExtResource("5_c5q7s")
 
 [node name="Terra" type="Sprite2D" parent="."]
@@ -193,145 +162,116 @@ texture = ExtResource("6_2nq01")
 
 [node name="Tile0110" type="Sprite2D" parent="Terra"]
 position = Vector2(18, -54)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0105" type="Sprite2D" parent="Terra"]
 position = Vector2(18, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0106" type="Sprite2D" parent="Terra"]
 position = Vector2(18, -18)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0107" type="Sprite2D" parent="Terra"]
 position = Vector2(0, -18)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0108" type="Sprite2D" parent="Terra"]
 position = Vector2(-9.53674e-07, -36)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0109" type="Sprite2D" parent="Terra"]
 position = Vector2(18, -36)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0111" type="Sprite2D" parent="Terra"]
 position = Vector2(0, -54)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0112" type="Sprite2D" parent="Terra"]
 position = Vector2(-9.53674e-07, -72)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0113" type="Sprite2D" parent="Terra"]
 position = Vector2(18, -72)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Terra2" type="Sprite2D" parent="Terra"]
 position = Vector2(-9.53674e-07, 90)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0110" type="Sprite2D" parent="Terra/Terra2"]
 position = Vector2(18, -54)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0105" type="Sprite2D" parent="Terra/Terra2"]
 position = Vector2(18, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0106" type="Sprite2D" parent="Terra/Terra2"]
 position = Vector2(18, -18)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0107" type="Sprite2D" parent="Terra/Terra2"]
 position = Vector2(0, -18)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0108" type="Sprite2D" parent="Terra/Terra2"]
 position = Vector2(-9.53674e-07, -36)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0109" type="Sprite2D" parent="Terra/Terra2"]
 position = Vector2(18, -36)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0111" type="Sprite2D" parent="Terra/Terra2"]
 position = Vector2(0, -54)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0112" type="Sprite2D" parent="Terra/Terra2"]
 position = Vector2(-9.53674e-07, -72)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0113" type="Sprite2D" parent="Terra/Terra2"]
 position = Vector2(18, -72)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Terra3" type="Sprite2D" parent="Terra"]
 position = Vector2(-9.53674e-07, 180)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0110" type="Sprite2D" parent="Terra/Terra3"]
 position = Vector2(18, -54)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0105" type="Sprite2D" parent="Terra/Terra3"]
 position = Vector2(18, 0)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0106" type="Sprite2D" parent="Terra/Terra3"]
 position = Vector2(18, -18)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0107" type="Sprite2D" parent="Terra/Terra3"]
 position = Vector2(0, -18)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0108" type="Sprite2D" parent="Terra/Terra3"]
 position = Vector2(-9.53674e-07, -36)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0109" type="Sprite2D" parent="Terra/Terra3"]
 position = Vector2(18, -36)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0111" type="Sprite2D" parent="Terra/Terra3"]
 position = Vector2(0, -54)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0112" type="Sprite2D" parent="Terra/Terra3"]
 position = Vector2(-9.53674e-07, -72)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
 
 [node name="Tile0113" type="Sprite2D" parent="Terra/Terra3"]
 position = Vector2(18, -72)
-scale = Vector2(1, 1)
 texture = ExtResource("6_2nq01")
