@@ -6,9 +6,18 @@ var gravetat = Vector2.DOWN * 988
 var salt := -500
 var max_salt := 2
 var salts_disponibles := max_salt
+var vides:= 3
+
+var monedes_agafades = 0
+
+func moneda_agafada():
+	monedes_agafades += 1
+	$contador_monedes.text = "%d" % [monedes_agafades]
+
 
 func _ready() -> void:
 	MOTION_MODE_GROUNDED
+	position = Vector2(0,530)
 
 func _process(delta: float) -> void:
 	var dx = Input.get_axis("moure_esquerra","moure_dreta")
@@ -40,11 +49,21 @@ func _process(delta: float) -> void:
 		else:
 			$AnimatedSprite2D.play("salt")
 	
+	if vides == 0:
+		self.queue_free()
+	if vides == 2:
+		$Cor2.play("Buit")
+	if vides == 1:
+		$Cor3.play("Buit")
 	
-
-
-
-
+	
+		
+	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == self:
-		queue_free()
+		vides-=1
+		position = Vector2(0,530)
+		
+	
+	
+	

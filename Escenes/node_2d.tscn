@@ -1,21 +1,73 @@
-[gd_scene load_steps=7 format=3 uid="uid://8i1bdtutlaij"]
+[gd_scene load_steps=11 format=3 uid="uid://8i1bdtutlaij"]
 
 [ext_resource type="PackedScene" uid="uid://brihn55cto723" path="res://Escenes/fons.tscn" id="1_khkio"]
 [ext_resource type="PackedScene" uid="uid://daofu4um8tcmv" path="res://Escenes/player.tscn" id="1_qabl6"]
 [ext_resource type="PackedScene" uid="uid://dayf88orsw1pj" path="res://Escenes/terra.tscn" id="2_gyiwt"]
+[ext_resource type="Texture2D" uid="uid://yu0xlcw3o220" path="res://Sprites/tile_0046.png" id="3_0v6t4"]
 [ext_resource type="PackedScene" uid="uid://duydwmegvvhnx" path="res://Escenes/death_zone.tscn" id="3_belbe"]
 [ext_resource type="PackedScene" path="res://Escenes/plataforma_2.tscn" id="3_hghi8"]
+[ext_resource type="Texture2D" uid="uid://dovv36uxwhuyd" path="res://Sprites/tile_0044.png" id="4_afjth"]
 [ext_resource type="PackedScene" uid="uid://1y8jd4l3u0bg" path="res://Escenes/moneda.tscn" id="5_6m6vu"]
+[ext_resource type="FontFile" uid="uid://dtolxx1ssfovp" path="res://Sprites/CutePixel.ttf" id="5_afjth"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4bsn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0v6t4")
+}],
+"loop": true,
+"name": &"Buit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_afjth")
+}],
+"loop": true,
+"name": &"Ple",
+"speed": 5.0
+}]
 
 [node name="Joc" type="Node2D"]
 
 [node name="Cel" parent="." instance=ExtResource("1_khkio")]
-position = Vector2(-839, 473)
+position = Vector2(-816, 384)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_qabl6")]
 scale = Vector2(3, 3)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="Cor" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-175.167, -90.6667)
+scale = Vector2(1.68518, 1.77778)
+sprite_frames = SubResource("SpriteFrames_h4bsn")
+animation = &"Ple"
+autoplay = "Ple"
+
+[node name="Cor2" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-112, -90.6667)
+scale = Vector2(1.77778, 1.77778)
+sprite_frames = SubResource("SpriteFrames_h4bsn")
+animation = &"Ple"
+autoplay = "Ple"
+
+[node name="Cor3" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-144, -90.6667)
+scale = Vector2(1.79167, 1.79167)
+sprite_frames = SubResource("SpriteFrames_h4bsn")
+animation = &"Ple"
+autoplay = "Ple"
+
+[node name="contador_monedes" type="Label" parent="CharacterBody2D"]
+offset_left = 85.3333
+offset_top = -101.333
+offset_right = 125.333
+offset_bottom = -78.3333
+theme_override_colors/font_color = Color(0.980392, 0.854902, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_afjth")
 
 [node name="plataforma_1" parent="." instance=ExtResource("2_gyiwt")]
 position = Vector2(0, 616)
@@ -27,7 +79,7 @@ position = Vector2(499, 476)
 position = Vector2(1096, 684)
 
 [node name="death_zone" parent="." instance=ExtResource("3_belbe")]
-position = Vector2(442, 1093)
+position = Vector2(505, 941)
 
 [node name="moneda_1" parent="." instance=ExtResource("5_6m6vu")]
 position = Vector2(1152, 632)

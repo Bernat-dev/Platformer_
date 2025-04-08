@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://db0hhxtlj66y4"]
+
+[ext_resource type="Texture2D" uid="uid://dovv36uxwhuyd" path="res://Sprites/tile_0044.png" id="1_m5ug7"]
+[ext_resource type="Texture2D" uid="uid://yu0xlcw3o220" path="res://Sprites/tile_0046.png" id="2_0whfb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4bsn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m5ug7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0whfb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cor" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_h4bsn")
