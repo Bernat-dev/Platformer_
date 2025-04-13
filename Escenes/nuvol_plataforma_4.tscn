@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfscmcbiibt0l"]
+
+[ext_resource type="Texture2D" uid="uid://chmrrj10i7a7s" path="res://Sprites/tile_0153.png" id="1_vox8y"]
+[ext_resource type="Texture2D" uid="uid://buojxvmjogm2y" path="res://Sprites/tile_0154.png" id="2_mkw44"]
+[ext_resource type="Texture2D" uid="uid://k6kcuntucyyh" path="res://Sprites/tile_0155.png" id="3_8jlt8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pkvex"]
+size = Vector2(704, 45)
+
+[node name="nuvol_plataforma_4" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+
+[node name="Tile0153" type="Sprite2D" parent="Sprite"]
+position = Vector2(-320, 0)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("1_vox8y")
+
+[node name="Tile0163" type="Sprite2D" parent="Sprite"]
+position = Vector2(-256, 0)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("2_mkw44")
+
+[node name="Tile0164" type="Sprite2D" parent="Sprite"]
+position = Vector2(-192, 0)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("2_mkw44")
+
+[node name="Tile0165" type="Sprite2D" parent="Sprite"]
+position = Vector2(-128, 0)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("2_mkw44")
+
+[node name="Tile0166" type="Sprite2D" parent="Sprite"]
+position = Vector2(-64, 0)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("2_mkw44")
+
+[node name="Tile0155" type="Sprite2D" parent="Sprite"]
+position = Vector2(320, 0)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("3_8jlt8")
+
+[node name="Tile0156" type="Sprite2D" parent="Sprite"]
+position = Vector2(64, 0)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("2_mkw44")
+
+[node name="Tile0157" type="Sprite2D" parent="Sprite"]
+position = Vector2(128, 0)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("2_mkw44")
+
+[node name="Tile0158" type="Sprite2D" parent="Sprite"]
+position = Vector2(192, 0)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("2_mkw44")
+
+[node name="Tile0159" type="Sprite2D" parent="Sprite"]
+position = Vector2(256, 0)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("2_mkw44")
+
+[node name="Tile0154" type="Sprite2D" parent="Sprite"]
+position = Vector2(-1.90735e-06, -1.90735e-06)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("2_mkw44")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9.5)
+shape = SubResource("RectangleShape2D_pkvex")

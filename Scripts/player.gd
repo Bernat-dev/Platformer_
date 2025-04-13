@@ -7,6 +7,9 @@ var salt := -500
 var max_salt := 2
 var salts_disponibles := max_salt
 var vides:= 3
+var vegades_entrades_checkpoint := 1
+
+var spawnpoint := Vector2(0,530)
 
 var monedes_agafades = 0
 
@@ -17,7 +20,8 @@ func moneda_agafada():
 
 func _ready() -> void:
 	MOTION_MODE_GROUNDED
-	position = Vector2(0,530)
+	position = spawnpoint
+	$contador_monedes.text = "0"
 
 func _process(delta: float) -> void:
 	var dx = Input.get_axis("moure_esquerra","moure_dreta")
@@ -55,15 +59,21 @@ func _process(delta: float) -> void:
 		$Cor2.play("Buit")
 	if vides == 1:
 		$Cor3.play("Buit")
-	
-	
+	if vides == 3:
+		$Cor2.play("Ple")
+		$Cor3.play("Ple")
 		
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body == self:
 		vides-=1
-		position = Vector2(0,530)
-		
-	
-	
-	
+		position = spawnpoint
+
+func _on_checkpoint_body_entered(body: CharacterBody2D) -> void:
+	spawnpoint = Vector2(1600,-1152)
+	if vegades_entrades_checkpoint == 1:
+		vides = 3
+	vegades_entrades_checkpoint = 0
+
+func final():
+	$final.visible = true

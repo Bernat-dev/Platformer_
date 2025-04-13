@@ -19,14 +19,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ct6yp"]
-radius = 8.0
+radius = 16.0
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_ytiv4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1.19209e-07, 1.19209e-07)
-scale = Vector2(1.55556, 1.55556)
+scale = Vector2(2.22222, 2.22222)
 sprite_frames = SubResource("SpriteFrames_1385l")
 autoplay = "default"
 speed_scale = 0.5

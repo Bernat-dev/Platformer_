@@ -1,14 +1,28 @@
-[gd_scene load_steps=11 format=3 uid="uid://8i1bdtutlaij"]
+[gd_scene load_steps=25 format=3 uid="uid://8i1bdtutlaij"]
 
-[ext_resource type="PackedScene" uid="uid://brihn55cto723" path="res://Escenes/fons.tscn" id="1_khkio"]
 [ext_resource type="PackedScene" uid="uid://daofu4um8tcmv" path="res://Escenes/player.tscn" id="1_qabl6"]
+[ext_resource type="Texture2D" uid="uid://ctt5wwcod5rvj" path="res://Sprites/forest_sky.png" id="2_a24el"]
 [ext_resource type="PackedScene" uid="uid://dayf88orsw1pj" path="res://Escenes/terra.tscn" id="2_gyiwt"]
 [ext_resource type="Texture2D" uid="uid://yu0xlcw3o220" path="res://Sprites/tile_0046.png" id="3_0v6t4"]
-[ext_resource type="PackedScene" uid="uid://duydwmegvvhnx" path="res://Escenes/death_zone.tscn" id="3_belbe"]
-[ext_resource type="PackedScene" path="res://Escenes/plataforma_2.tscn" id="3_hghi8"]
+[ext_resource type="PackedScene" uid="uid://b7n7jnacciiev" path="res://Escenes/death_zone.tscn" id="3_belbe"]
+[ext_resource type="PackedScene" uid="uid://b1uqkh3dewj3f" path="res://Escenes/plataforma_2.tscn" id="3_hghi8"]
+[ext_resource type="Texture2D" uid="uid://bgmuoxd2xsh3u" path="res://Sprites/forest_mountain.png" id="3_ktaku"]
 [ext_resource type="Texture2D" uid="uid://dovv36uxwhuyd" path="res://Sprites/tile_0044.png" id="4_afjth"]
+[ext_resource type="Texture2D" uid="uid://dojf27r6i5sha" path="res://Sprites/forest_back.png" id="4_xv20x"]
 [ext_resource type="PackedScene" uid="uid://1y8jd4l3u0bg" path="res://Escenes/moneda.tscn" id="5_6m6vu"]
 [ext_resource type="FontFile" uid="uid://dtolxx1ssfovp" path="res://Sprites/CutePixel.ttf" id="5_afjth"]
+[ext_resource type="Texture2D" uid="uid://cg13glvuklxoh" path="res://Sprites/forest_mid.png" id="5_jqrk2"]
+[ext_resource type="PackedScene" uid="uid://buhy2dn4h6rad" path="res://Escenes/nuvol_plataforma_2.tscn" id="6_5mbe3"]
+[ext_resource type="Texture2D" uid="uid://b2wemndmcsa52" path="res://Sprites/forest_long.png" id="6_yfxe2"]
+[ext_resource type="Texture2D" uid="uid://duxqlajf7aab5" path="res://Sprites/forest_short.png" id="7_es7iq"]
+[ext_resource type="PackedScene" uid="uid://4yae4l6kv4fd" path="res://Escenes/plataforma_3.tscn" id="10_1ltjm"]
+[ext_resource type="PackedScene" uid="uid://1mopux4rt6s" path="res://Escenes/Arbre.tscn" id="10_m2fer"]
+[ext_resource type="PackedScene" uid="uid://cvi4a7nwpgghq" path="res://Escenes/nuvol_plataforna_1.tscn" id="11_1ltjm"]
+[ext_resource type="Texture2D" uid="uid://doo8cbkbghv8b" path="res://Sprites/despedida.png" id="11_us718"]
+[ext_resource type="PackedScene" uid="uid://5xvek3mnbnbh" path="res://Escenes/nuvol_plataforma_3.tscn" id="13_01rnu"]
+[ext_resource type="PackedScene" uid="uid://cdx3f7wtowop4" path="res://Escenes/checkpoint.tscn" id="14_cjmqh"]
+[ext_resource type="PackedScene" uid="uid://dfscmcbiibt0l" path="res://Escenes/nuvol_plataforma_4.tscn" id="15_gr2gk"]
+[ext_resource type="PackedScene" uid="uid://ctf1fn3yn3luh" path="res://Escenes/porta.tscn" id="22_ktaku"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h4bsn"]
 animations = [{
@@ -31,63 +45,318 @@ animations = [{
 
 [node name="Joc" type="Node2D"]
 
-[node name="Cel" parent="." instance=ExtResource("1_khkio")]
-position = Vector2(-816, 384)
+[node name="zona_mort" parent="." instance=ExtResource("3_belbe")]
+position = Vector2(505, 941)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_qabl6")]
+[node name="Checkpoint" parent="." instance=ExtResource("14_cjmqh")]
+z_index = -1
+position = Vector2(1600, -1152)
+
+[node name="Plataformes" type="Node2D" parent="."]
+
+[node name="nuvol_plataforma_2" parent="Plataformes" instance=ExtResource("6_5mbe3")]
+position = Vector2(-192, -448)
+
+[node name="Nuvol_plataforna_1" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(1072, -456)
+
+[node name="Plataforma_4" parent="Plataformes" instance=ExtResource("10_1ltjm")]
+position = Vector2(528, -368)
+
+[node name="Plataforma_3" parent="Plataformes" instance=ExtResource("10_1ltjm")]
+position = Vector2(968, 280)
+
+[node name="Arbre" parent="Plataformes" instance=ExtResource("10_m2fer")]
+position = Vector2(1592, -1128)
+
+[node name="plataforma_4" parent="Plataformes" instance=ExtResource("3_hghi8")]
+position = Vector2(1144, -96)
+
+[node name="plataforma_3" parent="Plataformes" instance=ExtResource("2_gyiwt")]
+position = Vector2(1096, 684)
+
+[node name="plataforma_2" parent="Plataformes" instance=ExtResource("3_hghi8")]
+position = Vector2(499, 476)
+
+[node name="plataforma_1" parent="Plataformes" instance=ExtResource("2_gyiwt")]
+position = Vector2(0, 616)
+
+[node name="Nuvol_plataforna_5" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(1904, -920)
+
+[node name="nuvol_plataforma_3" parent="Plataformes" instance=ExtResource("13_01rnu")]
+position = Vector2(1256, -824)
+
+[node name="nuvol_plataforma_4" parent="Plataformes" instance=ExtResource("15_gr2gk")]
+position = Vector2(2328, -1240)
+
+[node name="Nuvol_plataforna_2" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(1840, -152)
+
+[node name="Nuvol_plataforna_3" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(1912, -440)
+
+[node name="Nuvol_plataforna_4" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(1832, -688)
+
+[node name="nuvol_plataforma_5" parent="Plataformes" instance=ExtResource("13_01rnu")]
+position = Vector2(3208, -1152)
+
+[node name="nuvol_plataforma_6" parent="Plataformes" instance=ExtResource("6_5mbe3")]
+position = Vector2(3896, -1304)
+
+[node name="nuvol_plataforma_7" parent="Plataformes" instance=ExtResource("13_01rnu")]
+position = Vector2(4408, -1480)
+
+[node name="nuvol_plataforma_8" parent="Plataformes" instance=ExtResource("13_01rnu")]
+position = Vector2(4864, -1456)
+
+[node name="Nuvol_plataforna_6" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(5160, -1632)
+
+[node name="nuvol_plataforma_9" parent="Plataformes" instance=ExtResource("13_01rnu")]
+position = Vector2(5520, -1504)
+
+[node name="nuvol_plataforma_10" parent="Plataformes" instance=ExtResource("13_01rnu")]
+position = Vector2(4864, -736)
+
+[node name="Nuvol_plataforna_10" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(5944, -1064)
+
+[node name="nuvol_plataforma_11" parent="Plataformes" instance=ExtResource("6_5mbe3")]
+position = Vector2(6064, -1616)
+
+[node name="Nuvol_plataforna_11" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(6288, -1176)
+
+[node name="nuvol_plataforma_12" parent="Plataformes" instance=ExtResource("13_01rnu")]
+position = Vector2(6624, -1528)
+
+[node name="Nuvol_plataforna_12" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(6704, -1256)
+
+[node name="Nuvol_plataforna_13" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(6944, -1368)
+
+[node name="Arbre2" parent="Plataformes" instance=ExtResource("10_m2fer")]
+position = Vector2(7184, -1392)
+
+[node name="Nuvol_plataforna_7" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(5064, -904)
+
+[node name="Nuvol_plataforna_8" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(5312, -928)
+
+[node name="Nuvol_plataforna_9" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(5544, -752)
+
+[node name="Nuvol_plataforna_14" parent="Plataformes" instance=ExtResource("11_1ltjm")]
+position = Vector2(5728, -904)
+
+[node name="Porta" parent="Plataformes" instance=ExtResource("22_ktaku")]
+z_index = -1
+position = Vector2(7184, -1424)
+
+[node name="Monedes" type="Node2D" parent="."]
+
+[node name="moneda_1" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(1152, 632)
+
+[node name="moneda_2" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(1088, 632)
+
+[node name="moneda_3" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(1024, 632)
+
+[node name="moneda_4" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(-312, -504)
+
+[node name="moneda_5" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(-264, -504)
+
+[node name="moneda_6" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(-216, -504)
+
+[node name="moneda_7" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(-168, -504)
+
+[node name="moneda_8" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(-120, -504)
+
+[node name="moneda_9" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(-72, -504)
+
+[node name="moneda_10" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(-192, -232)
+
+[node name="moneda_11" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(-192, -176)
+
+[node name="moneda_12" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(-192, -120)
+
+[node name="moneda_13" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(-192, -64)
+
+[node name="moneda_14" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(-192, -8)
+
+[node name="moneda_15" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(1688, -152)
+
+[node name="moneda_16" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(1688, -96)
+
+[node name="moneda_17" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(1688, -40)
+
+[node name="moneda_18" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(1688, 16)
+
+[node name="moneda_19" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(1688, 72)
+
+[node name="moneda_20" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(2104, -1336)
+
+[node name="moneda_21" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(2176, -1392)
+
+[node name="moneda_22" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(2240, -1432)
+
+[node name="moneda_23" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(2336, -1448)
+
+[node name="moneda_24" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(2432, -1432)
+
+[node name="moneda_25" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(2496, -1392)
+
+[node name="moneda_26" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(2568, -1336)
+
+[node name="moneda_27" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(4864, -1328)
+
+[node name="moneda_28" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(4864, -1272)
+
+[node name="moneda_29" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(4864, -1216)
+
+[node name="moneda_30" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(4864, -1160)
+
+[node name="moneda_31" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(4864, -1104)
+
+[node name="moneda_32" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(4864, -1048)
+
+[node name="moneda_33" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(4864, -992)
+
+[node name="moneda_34" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(4864, -936)
+
+[node name="moneda_35" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(4864, -880)
+
+[node name="moneda_36" parent="Monedes" instance=ExtResource("5_6m6vu")]
+position = Vector2(4864, -824)
+
+[node name="Jugador" parent="." instance=ExtResource("1_qabl6")]
 scale = Vector2(3, 3)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Jugador"]
 
-[node name="Cor" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="Cel" type="ParallaxLayer" parent="Jugador/ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1900, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugador/ParallaxBackground/Cel"]
+position = Vector2(-336, 264)
+texture = ExtResource("2_a24el")
+
+[node name="Montanyes" type="ParallaxLayer" parent="Jugador/ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(3800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugador/ParallaxBackground/Montanyes"]
+position = Vector2(-104, 136)
+texture = ExtResource("3_ktaku")
+
+[node name="Fons" type="ParallaxLayer" parent="Jugador/ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(3800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugador/ParallaxBackground/Fons"]
+position = Vector2(48, 48)
+texture = ExtResource("4_xv20x")
+
+[node name="Fons2" type="ParallaxLayer" parent="Jugador/ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(3800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugador/ParallaxBackground/Fons2"]
+position = Vector2(96, -104)
+texture = ExtResource("5_jqrk2")
+
+[node name="Fons3" type="ParallaxLayer" parent="Jugador/ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(3800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugador/ParallaxBackground/Fons3"]
+position = Vector2(176, 160)
+texture = ExtResource("6_yfxe2")
+
+[node name="Fons4" type="ParallaxLayer" parent="Jugador/ParallaxBackground"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(3800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugador/ParallaxBackground/Fons4"]
+position = Vector2(128, -128)
+texture = ExtResource("7_es7iq")
+
+[node name="Camera2D" type="Camera2D" parent="Jugador"]
+
+[node name="Cor" type="AnimatedSprite2D" parent="Jugador"]
 position = Vector2(-175.167, -90.6667)
 scale = Vector2(1.68518, 1.77778)
 sprite_frames = SubResource("SpriteFrames_h4bsn")
 animation = &"Ple"
 autoplay = "Ple"
 
-[node name="Cor2" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="Cor2" type="AnimatedSprite2D" parent="Jugador"]
 position = Vector2(-112, -90.6667)
 scale = Vector2(1.77778, 1.77778)
 sprite_frames = SubResource("SpriteFrames_h4bsn")
 animation = &"Ple"
 autoplay = "Ple"
 
-[node name="Cor3" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="Cor3" type="AnimatedSprite2D" parent="Jugador"]
 position = Vector2(-144, -90.6667)
 scale = Vector2(1.79167, 1.79167)
 sprite_frames = SubResource("SpriteFrames_h4bsn")
 animation = &"Ple"
 autoplay = "Ple"
 
-[node name="contador_monedes" type="Label" parent="CharacterBody2D"]
-offset_left = 85.3333
-offset_top = -101.333
-offset_right = 125.333
-offset_bottom = -78.3333
+[node name="contador_monedes" type="Label" parent="Jugador"]
+offset_left = 144.0
+offset_top = -98.6667
+offset_right = 160.0
+offset_bottom = -79.6667
 theme_override_colors/font_color = Color(0.980392, 0.854902, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_afjth")
+theme_override_font_sizes/font_size = 20
 
-[node name="plataforma_1" parent="." instance=ExtResource("2_gyiwt")]
-position = Vector2(0, 616)
+[node name="final" type="Sprite2D" parent="Jugador"]
+visible = false
+scale = Vector2(0.161088, 0.174236)
+texture = ExtResource("11_us718")
 
-[node name="plataforma_2" parent="." instance=ExtResource("3_hghi8")]
-position = Vector2(499, 476)
-
-[node name="plataforma_3" parent="." instance=ExtResource("2_gyiwt")]
-position = Vector2(1096, 684)
-
-[node name="death_zone" parent="." instance=ExtResource("3_belbe")]
-position = Vector2(505, 941)
-
-[node name="moneda_1" parent="." instance=ExtResource("5_6m6vu")]
-position = Vector2(1152, 632)
-
-[node name="moneda_2" parent="." instance=ExtResource("5_6m6vu")]
-position = Vector2(1088, 632)
-
-[node name="moneda_3" parent="." instance=ExtResource("5_6m6vu")]
-position = Vector2(1024, 632)
-
-[connection signal="body_entered" from="death_zone" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="zona_mort" to="Jugador" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Checkpoint" to="Jugador" method="_on_checkpoint_body_entered"]

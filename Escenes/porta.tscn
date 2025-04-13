@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctf1fn3yn3luh"]
+
+[ext_resource type="Script" uid="uid://duhoq30r3squd" path="res://Scripts/porta.gd" id="1_v7ech"]
+[ext_resource type="Texture2D" uid="uid://0cyjm6c4c2ls" path="res://Sprites/tile_0130.png" id="2_kvhwh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjsuw"]
+size = Vector2(48, 48)
+
+[node name="Porta" type="Area2D"]
+script = ExtResource("1_v7ech")
+
+[node name="Tile0130" type="Sprite2D" parent="."]
+scale = Vector2(2.66667, 2.66667)
+texture = ExtResource("2_kvhwh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wjsuw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

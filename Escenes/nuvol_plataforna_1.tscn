@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvi4a7nwpgghq"]
+
+[ext_resource type="Texture2D" uid="uid://dby4yidkgldp8" path="res://Sprites/tile_0156.png" id="1_qm3ba"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0dqi"]
+size = Vector2(64, 32)
+
+[node name="Nuvol_plataforna_1" type="StaticBody2D"]
+
+[node name="Tile0156" type="Sprite2D" parent="."]
+position = Vector2(0, 5.68434e-14)
+scale = Vector2(3.55556, 3.55556)
+texture = ExtResource("1_qm3ba")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_k0dqi")
